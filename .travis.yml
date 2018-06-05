@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- '10'
+- '9'
+cache:
+  directories:
+  - node_modules
+script:
+  - yarn lint
+  - yarn test
+  - yarn compile
+deploy:
+  provider: npm
+  email: $NPM_EMAIL
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
+    repo: guthega/log_receiver
+    node: '10'
