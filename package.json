@@ -1,7 +1,7 @@
 {
   "name": "@guthega/log_receiver",
   "version": "1.0.0",
-  "description": "Simple log handler for Guthega",
+  "description": "Simple log receiver for Guthega",
   "main": "./lib/log_receiver",
   "repository": "https://github.com/guthega/log_receiver.git",
   "author": "Adam Schmidt <aschmidt1978@gmail.com>",
