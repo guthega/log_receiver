@@ -9,6 +9,8 @@ script:
   - yarn lint
   - yarn test
   - yarn compile
+after_success:
+  - yarn coverage
 deploy:
   provider: npm
   email: $NPM_EMAIL
