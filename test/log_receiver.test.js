@@ -7,14 +7,10 @@ chai.use(asPromised);
 should();
 
 describe('log_receiver', function() {
-  var server = {
-    log: {
-      debug(){},
-    },
-  };
+  var receiverContext = {};
 
   describe('receiver()', function() {
-    var f = receiver(server);
+    var f = receiver(receiverContext);
 
     it('receiver factory should return a function', function() {
       f.should.be.a('Function');
@@ -27,7 +23,7 @@ describe('log_receiver', function() {
   });
 
   describe('messageReceived()', function() {
-    var f = receiver(server);
+    var f = receiver(receiverContext);
     it('receiver promise should resolve', function() {
       var h = f();
       h.should.be.fulfilled;

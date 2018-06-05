@@ -1,9 +1,10 @@
+import log from 'winston';
 
-const receiver = (serverContext) => {
-  serverContext.log.debug('Example module configuration', serverContext.config);
+const receiver = (receiverContext) => {
+  log.debug('Example module configuration', receiverContext.config);
   return (message, messageContext) => new Promise((res) => {
-    serverContext.log.debug('Message context', messageContext);
-    serverContext.log.debug('Message content', message);
+    log.debug('Message context', messageContext);
+    log.debug('Message content', message);
 
     res({});
   });
