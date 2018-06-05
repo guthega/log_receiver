@@ -7,7 +7,13 @@ chai.use(asPromised);
 should();
 
 describe('log_receiver', function() {
-  var receiverContext = {};
+  var receiverContext = {
+    config: { level: 'info' },
+    log: {
+      debug(){},
+      log(){}
+    },
+  };
 
   describe('receiver()', function() {
     var f = receiver(receiverContext);
