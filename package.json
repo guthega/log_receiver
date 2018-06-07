@@ -1,6 +1,6 @@
 {
   "name": "@guthega/log_receiver",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Simple log receiver for Guthega",
   "main": "./lib/log_receiver",
   "repository": "https://github.com/guthega/log_receiver.git",
